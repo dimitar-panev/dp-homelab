@@ -1,0 +1,35 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+
+- Network:
+    - NextDNS:
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/nextdns.png
+        widget:
+         type: nextdns
+         profile: {{HOMEPAGE_VAR_NEXTDNS_PROFILE}}
+         key: {{HOMEPAGE_VAR_NEXTDNS_ID}}
+    - Speedtest:
+        widget:
+         type: speedtest
+         url: http://172.16.175.180:3003
+         version: 1 # optional, default is 1
+         key: {{HOMEPAGE_VAR_SPEEDTEST_KEY}} # required for version 2
+         bitratePrecision: 3 # optional, default is 0
+- Proxmox:
+    - Proxmox Services:
+       icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/proxmox-light.png
+       widget:
+        type: proxmox
+        url: https://172.16.175.114:8006
+        username: {{HOMEPAGE_VAR_PROXMOX_USER}}
+        password: {{HOMEPAGE_VAR_PROXMOX_PASSWORD}}
+        tlsInsecure: true
+- Calendar:
+    - My Calendar:
+       widget:
+        type: calendar
+        view: monthly
+        maxEvents: 10 # optional - defaults to 10
+        showTime: true # optional - show time for event happening today - defaults to false
+        previousDays: 3 # optional - shows events since three days ago - defaults to 0

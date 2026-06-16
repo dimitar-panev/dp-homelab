@@ -1,0 +1,24 @@
+# 1. Global Secrets
+# Ignores any .env file in any subfolder
+**/.env
+
+# 2. Nginx Proxy Manager
+# Ignores the SQLite database, access lists, and Let's Encrypt certificates
+npm/data/
+npm/letsencrypt/
+
+# 3. Pingvin Share
+# Ignores the SQLite database and all user uploads
+pingvin/data/
+
+# 4. Speedtest Tracker
+# Ignores the database, private SSL keys, and local logs
+speedtest-tracker/config/database.sqlite
+speedtest-tracker/config/keys/
+speedtest-tracker/config/log/
+
+# 5. Logs (Global Catch-all)
+# Prevents any log files from being uploaded
+**/*.log
+**/*.log.*
+**/*.gz

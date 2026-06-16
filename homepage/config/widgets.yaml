@@ -1,0 +1,23 @@
+- greeting:
+    text_size: xxl
+    text: Good day, Dimitar
+
+- resources:
+    cpu: true
+    memory: true
+    disk: /
+
+- search:
+    provider: duckduckgo
+    target: blank
+
+- openweathermap:
+    label: Sofia
+    latitude: 42.6983
+    longitude: 23.3199
+    units: metric
+    provider: openweathermap
+    apiKey: {{HOMEPAGE_VAR_OPENWEATHER_API_KEY}}
+    cache: 5
+    format:
+      maximumFractionDigits: 1

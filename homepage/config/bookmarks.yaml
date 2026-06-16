@@ -1,0 +1,34 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/bookmarks
+- Services:
+    - Proxy Manager:
+        - abbr: PM
+          href: http://proxy.local/
+    - Pingvin Share:
+        - abbr: PSH
+          href: http://share.local/
+    - Everything IT:
+        - abbr: IT
+          href: http://tools.local/
+- Developer:
+    - Github:
+        - abbr: GH
+          href: https://github.com/
+    - Learn Anything:
+        - abbr: LA
+          href: https://learn-anything.xyz/
+    - DevTut:
+        - abbr: DT
+          href: https://devtut.github.io/
+- Socials:
+    - Reddit:
+        - icon: reddit.png
+          href: https://reddit.com/
+          description: The front page of the internet
+    - YouTube:
+        - abbr: YT
+          href: https://youtube.com/
+    - Instagram:
+        - abbr: IG
+          href: https://www.instagram.com/

@@ -1,0 +1,20 @@
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    restart: unless-stopped
+    ports:
+      - "3002:3000"
+    environment:
+      # Your existing hardcoded variable
+      - HOMEPAGE_ALLOWED_HOSTS=172.16.175.180:3002,home.local
+      # The secure injections from your local .env file
+      - HOMEPAGE_VAR_OPENWEATHER_API_KEY={OPENWEATHER_API_KEY}
+      - HOMEPAGE_VAR_NEXTDNS_ID=${NEXTDNS_ID}
+      - HOMEPAGE_VAR_NEXTDNS_PROFILE=${NEXTDNS_PROFILE}
+      - HOMEPAGE_VAR_PROXMOX_USER=${PROXMOX_USER}
+      - HOMEPAGE_VAR_PROXMOX_PASSWORD=${PROXMOX_PASSWORD}
+      - HOMEPAGE_VAR_SPEEDTEST_KEY=${SPEEDTEST_KEY}
+    volumes:
+      - ./config:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock:ro

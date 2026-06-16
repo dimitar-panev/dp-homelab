@@ -1,0 +1,16 @@
+services:
+  speedtest-tracker:
+    image: lscr.io/linuxserver/speedtest-tracker:latest
+    container_name: speedtest-tracker
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - DB_CONNECTION=sqlite
+      - API_KEY=${SPEEDTEST_API_KEY}
+      - SPEEDTEST_SCHEDULE=0 * * * * # Runs automatically every hour
+      - HOMEPAGE_ALLOWED_HOSTS=172.16.175.180:3003, speedtest.local
+    ports:
+      - "3003:80"
+    volumes:
+      - ./config:/config
+    restart: unless-stopped
