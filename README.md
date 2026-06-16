@@ -3,7 +3,7 @@
 A modular, self-hosted homelab infrastructure deployed on an Ubuntu virtual machine via Proxmox. This repository contains the Docker Compose configurations and deployment structures for my core network services.
 
 ## 👨‍💻 About
-Maintained by **Le Me** with the idea of integrating more stuff into this project of mine. I am currently looking into terraform so maybe I could implement it here as well. 
+Maintained by **Le Me** with the idea of integrating more stuff into this project of mine. I am currently looking into Terraform so maybe I could implement it here as well. 
 
 ## 🏗️ Architecture & Philosophy
 
@@ -20,6 +20,16 @@ This homelab utilizes a modular Docker design. Rather than a single monolithic `
 * **[Pingvin Share](https://github.com/stonith404/pingvin-share):** A self-hosted, privacy-focused alternative for secure file sharing.
 * **[Speedtest Tracker](https://github.com/alexjustesen/speedtest-tracker):** Automated network performance monitoring and logging.
 * **[IT-Tools](https://it-tools.tech/):** A lightweight collection of handy developer and sysadmin tools.
+  
+## Roadmap & Future Implementations
+
+As this infrastructure evolves, the following technologies and architectural improvements are slated for deployment:
+
+**Infrastructure as Code (IaC):** Implementing Terraform to manage the Proxmox hypervisor layer and automate the provisioning of future Ubuntu VMs and LXC containers.
+
+**Observability & Alerting:** Deploying Prometheus & Grafana to actively monitor system metrics, container health, and network throughput across the VM.
+
+**Identity Provider (SSO):** Integrating Authentik or Authelia behind Nginx Proxy Manager to enforce strict 2FA (Two-Factor Authentication) across all exposed web services.
 
 ## 📂 Directory Structure
 
