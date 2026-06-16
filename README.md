@@ -3,7 +3,7 @@
 A modular, self-hosted homelab infrastructure deployed on an Ubuntu virtual machine via Proxmox. This repository contains the Docker Compose configurations and deployment structures for my core network services.
 
 ## 👨‍💻 About
-Maintained by **Dimitar Panev**, a Network Engineer and System Administrator based in Sofia, Bulgaria. Built with a focus on privacy, security, and a clean, minimalist system architecture.
+Maintained by **Le Me** with the idea of integrating more stuff into this project of mine. I am currently looking into terraform so maybe I could implement it here as well. 
 
 ## 🏗️ Architecture & Philosophy
 
