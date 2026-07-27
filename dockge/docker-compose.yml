@@ -1,0 +1,16 @@
+services:
+  dockge:
+    image: louislam/dockge:latest
+    container_name: dockge
+    restart: unless-stopped
+    ports:
+      - "3005:5001"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data:/app/data
+      # ⚠️ VERY IMPORTANT: The left and right sides MUST MATCH EXACTLY. 
+      # If your main folder is located somewhere else, update both sides of this path.
+      - /home/dpvm/docker:/home/dpvm/docker
+    environment:
+      # This tells Dockge where to scan for your existing apps
+      - DOCKGE_STACKS_DIR=/home/dpvm/docker

@@ -17,7 +17,7 @@
     longitude: 23.3199
     units: metric
     provider: openweathermap
-    apiKey: {{HOMEPAGE_VAR_OPENWEATHER_API_KEY}}
+    apiKey: {{HOMEPAGE_VAR_OPENWEATHER_API}}
     cache: 5
     format:
       maximumFractionDigits: 1

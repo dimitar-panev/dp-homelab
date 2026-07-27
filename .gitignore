@@ -22,3 +22,10 @@ speedtest-tracker/config/log/
 **/*.log
 **/*.log.*
 **/*.gz
+
+#6 InfluxDB files
+influxDB/data/
+influxDB/config/
+
+#7 Dockge files
+dockge/data/
