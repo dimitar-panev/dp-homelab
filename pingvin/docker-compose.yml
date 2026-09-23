@@ -3,7 +3,12 @@ services:
     image: stonith404/pingvin-share:latest
     container_name: pingvin-share
     restart: unless-stopped
-    ports:
-      - "3001:3000"
+   # ports:
+   #   - "3001:3000"
+    networks:
+      - proxy-net
     volumes:
       - ./data:/opt/app/backend/data
+networks:
+  proxy-net:
+    external: true

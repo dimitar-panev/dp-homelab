@@ -3,8 +3,10 @@ services:
     image: louislam/dockge:latest
     container_name: dockge
     restart: unless-stopped
-    ports:
-      - "3005:5001"
+    #ports:
+    #  - "3005:5001"
+    networks:
+      - proxy-net
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./data:/app/data
@@ -14,3 +16,6 @@ services:
     environment:
       # This tells Dockge where to scan for your existing apps
       - DOCKGE_STACKS_DIR=/home/dpvm/docker
+networks:
+  proxy-net:
+    external: true

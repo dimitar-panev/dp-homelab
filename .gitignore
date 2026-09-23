@@ -29,3 +29,10 @@ influxDB/config/
 
 #7 Dockge files
 dockge/data/
+
+# 8. Stirling-PDF Databases and Backups
+stirling-pdf/extraConfigs/backup/
+stirling-pdf/extraConfigs/*.db
+
+# 9. Speedtest Tracker state files
+speedtest-tracker/config/.config/

@@ -3,8 +3,10 @@ services:
     image: ghcr.io/gethomepage/homepage:latest
     container_name: homepage
     restart: unless-stopped
-    ports:
-      - "3002:3000"
+   # ports:
+   #   - "3002:3000"
+    networks:
+      - proxy-net
     environment:
       # Your existing hardcoded variable
       - HOMEPAGE_ALLOWED_HOSTS=172.16.175.180:3002,home.local
@@ -18,3 +20,6 @@ services:
     volumes:
       - ./config:/app/config
       - /var/run/docker.sock:/var/run/docker.sock:ro
+networks:
+  proxy-net:
+    external: true

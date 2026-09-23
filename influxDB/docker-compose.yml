@@ -2,9 +2,14 @@ services:
   influxdb:
     image: influxdb:2.7
     container_name: influxdb
-    ports:
-      - "8086:8086"
+   # ports:
+   #   - "8086:8086"
+    networks:
+      - proxy-net
     volumes:
       - ./data:/var/lib/influxdb2
       - ./config:/etc/influxdb2
     restart: unless-stopped
+networks:
+  proxy-net:
+    external: true
